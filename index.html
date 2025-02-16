@@ -3,79 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="scroll-indicator"></div>
-
-    <header class="animate-bounce">
-        <h1 id="typing-text"></h1>
-        <p id="role-text">Web Developer | Designer | Programmer</p>
-        <button id="darkModeToggle">🌙 Dark Mode</button>
+    <!-- Navigation Bar -->
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>I'm a passionate web developer.</p>
+    </section>
 
-    <section id="about" class="reveal">
+    <!-- About Section -->
+    <section id="about">
+        <img src="images/profile.jpg" alt="Profile Picture">
         <h2>About Me</h2>
-        <p>Hello! I am a passionate developer with experience in creating web applications. I love coding and solving problems.</p>
+        <p>Hello! I'm a web developer skilled in HTML, CSS, and JavaScript.</p>
     </section>
 
-    <section id="skills" class="reveal">
-        <h2>My Skills</h2>
-        <div class="skill">
-            <p>HTML</p>
-            <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
-        </div>
-        <div class="skill">
-            <p>CSS</p>
-            <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
-        </div>
-        <div class="skill">
-            <p>JavaScript</p>
-            <div class="progress"><div class="progress-bar" style="width: 75%"></div></div>
-        </div>
-    </section>
-
-    <section id="projects" class="reveal">
+    <!-- Projects Section -->
+    <section id="projects">
         <h2>Projects</h2>
-        <div class="project tilt">
-            <img src="project1.jpg" class="gallery-img">
-            <h3>Project 1</h3>
-            <p>A personal blog website.</p>
+        <div class="project">
+            <img src="images/project1.jpg" alt="Project 1">
+            <h3>Project One</h3>
+            <p>Description of the project.</p>
         </div>
-        <div class="project tilt">
-            <img src="project2.jpg" class="gallery-img">
-            <h3>Project 2</h3>
-            <p>A weather forecasting app.</p>
-        </div>
-        <div class="project tilt">
-            <img src="project3.jpg" class="gallery-img">
-            <h3>Project 3</h3>
-            <p>A task management system.</p>
+        <div class="project">
+            <img src="images/project2.jpg" alt="Project 2">
+            <h3>Project Two</h3>
+            <p>Description of the project.</p>
         </div>
     </section>
 
-    <section id="contact" class="reveal">
-        <h2>Contact</h2>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
         <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="neon-btn">Send Message</button>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
     <footer>
-        <p>© 2025 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2025 My Portfolio</p>
     </footer>
 
     <script src="script.js"></script>
