@@ -60,3 +60,34 @@ document.querySelectorAll(".gallery-img").forEach(img => {
         });
     });
 });
+// Dark Mode Toggle Fix
+const darkModeToggle = document.getElementById("darkModeToggle");
+const body = document.body;
+
+// Function to enable dark mode
+function enableDarkMode() {
+    body.classList.add("dark-mode");
+    localStorage.setItem("dark-mode", "enabled");
+    darkModeToggle.textContent = "☀️ Light Mode";
+}
+
+// Function to disable dark mode
+function disableDarkMode() {
+    body.classList.remove("dark-mode");
+    localStorage.setItem("dark-mode", "disabled");
+    darkModeToggle.textContent = "🌙 Dark Mode";
+}
+
+// Check local storage for dark mode preference
+if (localStorage.getItem("dark-mode") === "enabled") {
+    enableDarkMode();
+}
+
+// Toggle Dark Mode on button click
+darkModeToggle.addEventListener("click", () => {
+    if (body.classList.contains("dark-mode")) {
+        disableDarkMode();
+    } else {
+        enableDarkMode();
+    }
+});
