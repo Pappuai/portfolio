@@ -1,92 +1,70 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    transition: background 0.3s, color 0.3s;
-    background-color: #f4f4f4;
-    color: #333;
-    scroll-behavior: smooth;
+/* Scroll Indicator */
+#scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: #ffcc00;
+    z-index: 999;
 }
 
-/* Header Bounce Effect */
-.animate-bounce {
-    animation: bounce 1.5s infinite;
+/* Typing Effect */
+#role-text {
+    font-size: 20px;
+    color: #ffcc00;
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+/* Skills Section */
+.skill {
+    width: 50%;
+    margin: auto;
 }
 
-/* Fade In Effect */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Scroll Reveal Effect */
-.reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease-in-out;
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Glow on Hover */
-.glow-on-hover {
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.glow-on-hover:hover {
-    box-shadow: 0 0 15px rgba(255, 223, 0, 0.8);
-}
-
-/* Ripple Button Effect */
-button.ripple {
-    position: relative;
-    overflow: hidden;
-}
-
-button.ripple::after {
-    content: "";
-    position: absolute;
-    background: rgba(255, 255, 255, 0.6);
-    width: 10px;
+.progress {
+    background: #ccc;
     height: 10px;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: transform 0.5s;
+    border-radius: 5px;
 }
 
-button.ripple:active::after {
-    transform: scale(5);
+.progress-bar {
+    background: #ffcc00;
+    height: 100%;
+    width: 0%;
+    transition: width 2s ease-in-out;
 }
 
-/* Input Shake Effect */
-input:invalid, textarea:invalid {
-    animation: shake 0.3s ease-in-out;
+/* 3D Tilt Effect */
+.tilt {
+    transition: transform 0.3s;
 }
 
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
+.tilt:hover {
+    transform: rotateY(10deg) rotateX(10deg);
 }
 
-/* Dark Mode */
-.dark-mode {
-    background-color: #222;
+/* Gallery Image */
+.gallery-img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+}
+
+/* Neon Button */
+.neon-btn {
+    padding: 10px 20px;
+    border: none;
+    background: #222;
     color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ffcc00;
+    transition: box-shadow 0.3s;
+}
+
+.neon-btn:hover {
+    box-shadow: 0 0 20px #ffcc00;
 }
