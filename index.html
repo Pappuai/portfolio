@@ -5,47 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <header>
-        <h1>My Portfolio</h1>
+        <div class="logo">Portfolio</div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button id="dark-mode-toggle"><i class="fas fa-moon"></i></button></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Home Section -->
-    <section id="home">
-        <h2>Welcome to My Portfolio</h2>
-        <p>I'm a passionate web developer.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm <span>Your Name</span></h1>
+            <p>Web Developer | UI/UX Enthusiast</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <img src="images/profile.jpg" alt="Profile Picture">
-        <h2>About Me</h2>
-        <p>Hello! I'm a web developer skilled in HTML, CSS, and JavaScript.</p>
+    <section id="about" class="fade-in">
+        <div class="about-content">
+            <img src="assets/images/profile.jpg" alt="Profile Picture">
+            <div>
+                <h2>About Me</h2>
+                <p>A passionate developer creating modern and responsive websites.</p>
+                <a href="resume.pdf" class="btn">Download Resume</a>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <img src="images/project1.jpg" alt="Project 1">
-            <h3>Project One</h3>
-            <p>Description of the project.</p>
-        </div>
-        <div class="project">
-            <img src="images/project2.jpg" alt="Project 2">
-            <h3>Project Two</h3>
-            <p>Description of the project.</p>
+        <div class="projects-container">
+            <div class="project fade-in">
+                <img src="assets/images/project1.jpg" alt="Project 1">
+                <div class="overlay">
+                    <h3>Project One</h3>
+                    <p>Project description goes here.</p>
+                </div>
+            </div>
+            <div class="project fade-in">
+                <img src="assets/images/project2.jpg" alt="Project 2">
+                <div class="overlay">
+                    <h3>Project Two</h3>
+                    <p>Project description goes here.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -56,12 +72,12 @@
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="Your Email" required>
             <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <button type="submit" class="btn">Send</button>
         </form>
     </section>
 
     <footer>
-        <p>&copy; 2025 My Portfolio</p>
+        <p>&copy; 2025 Your Name | <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
     </footer>
 
     <script src="script.js"></script>
