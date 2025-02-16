@@ -1,46 +1,62 @@
-// Typing Effect
-const text = "Welcome to My Portfolio!";
-let index = 0;
+// Typing Effect for Role
+const roles = ["Web Developer", "Designer", "Programmer"];
+let roleIndex = 0;
+let charIndex = 0;
 
-function typeText() {
-    if (index < text.length) {
-        document.getElementById("typing-text").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeText, 100);
+function typeRole() {
+    if (charIndex < roles[roleIndex].length) {
+        document.getElementById("role-text").innerHTML += roles[roleIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeRole, 100);
+    } else {
+        setTimeout(eraseRole, 1000);
     }
 }
 
-document.addEventListener("DOMContentLoaded", typeText);
-
-// Dark Mode Toggle
-const darkModeToggle = document.getElementById("darkModeToggle");
-const body = document.body;
-
-if (localStorage.getItem("dark-mode") === "enabled") {
-    body.classList.add("dark-mode");
+function eraseRole() {
+    if (charIndex > 0) {
+        document.getElementById("role-text").innerHTML = roles[roleIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(eraseRole, 50);
+    } else {
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeRole, 500);
+    }
 }
 
-darkModeToggle.addEventListener("click", function () {
-    body.classList.toggle("dark-mode");
-    localStorage.setItem("dark-mode", body.classList.contains("dark-mode") ? "enabled" : "disabled");
+document.addEventListener("DOMContentLoaded", typeRole);
+
+// Scroll Indicator
+window.addEventListener("scroll", function() {
+    let scrollTop = document.documentElement.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollPercentage = (scrollTop / scrollHeight) * 100;
+    document.getElementById("scroll-indicator").style.width = scrollPercentage + "%";
 });
 
-// Back to Top Button
-document.getElementById("backToTop").addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// Scroll Reveal Effect
-const revealElements = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-    revealElements.forEach((el) => {
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < window.innerHeight - 50) {
-            el.classList.add("visible");
+// Animate Skills Progress Bars
+window.addEventListener("scroll", function() {
+    document.querySelectorAll(".progress-bar").forEach(bar => {
+        let rect = bar.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            bar.style.width = bar.style.width;
         }
     });
-}
+});
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+// Enlarge Image on Click
+document.querySelectorAll(".gallery-img").forEach(img => {
+    img.addEventListener("click", function() {
+        let modal = document.createElement("div");
+        modal.classList.add("modal");
+        modal.innerHTML = `<div class="modal-content">
+            <img src="${img.src}">
+            <button class="close-modal">X</button>
+        </div>`;
+        document.body.appendChild(modal);
+
+        document.querySelector(".close-modal").addEventListener("click", function() {
+            modal.remove();
+        });
+    });
+});
