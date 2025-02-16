@@ -68,3 +68,25 @@
 .neon-btn:hover {
     box-shadow: 0 0 20px #ffcc00;
 }
+/* Default Light Mode */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+/* Navbar Dark Mode */
+.dark-mode nav {
+    background: #444;
+}
+
+/* Button Dark Mode */
+.dark-mode button {
+    background: #ffcc00;
+    color: #222;
+}
