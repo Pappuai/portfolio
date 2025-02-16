@@ -1,92 +1,91 @@
-/* Scroll Indicator */
-#scroll-indicator {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 0%;
-    height: 5px;
-    background: #ffcc00;
-    z-index: 999;
 }
 
-/* Typing Effect */
-#role-text {
-    font-size: 20px;
-    color: #ffcc00;
+header h1 {
+    margin: 0;
 }
 
-/* Skills Section */
-.skill {
-    width: 50%;
-    margin: auto;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.progress {
-    background: #ccc;
-    height: 10px;
-    border-radius: 5px;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-.progress-bar {
-    background: #ffcc00;
-    height: 100%;
-    width: 0%;
-    transition: width 2s ease-in-out;
+nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
-/* 3D Tilt Effect */
-.tilt {
-    transition: transform 0.3s;
+/* Sections */
+section {
+    padding: 80px 20px;
+    margin-top: 60px;
 }
 
-.tilt:hover {
-    transform: rotateY(10deg) rotateX(10deg);
+/* About */
+#about img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
-/* Gallery Image */
-.gallery-img {
-    width: 100%;
-    cursor: pointer;
-    transition: transform 0.3s;
+/* Projects */
+.project {
+    display: inline-block;
+    margin: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.gallery-img:hover {
-    transform: scale(1.1);
+.project img {
+    width: 200px;
+    border-radius: 8px;
 }
 
-/* Neon Button */
-.neon-btn {
+/* Contact */
+#contact-form input, #contact-form textarea {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#contact-form button {
     padding: 10px 20px;
+    background: #333;
+    color: white;
     border: none;
-    background: #222;
-    color: white;
     cursor: pointer;
-    box-shadow: 0 0 10px #ffcc00;
-    transition: box-shadow 0.3s;
 }
 
-.neon-btn:hover {
-    box-shadow: 0 0 20px #ffcc00;
-}
-/* Default Light Mode */
-body {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Dark Mode */
-.dark-mode {
-    background-color: #222;
+/* Footer */
+footer {
+    background: #333;
     color: white;
-}
-
-/* Navbar Dark Mode */
-.dark-mode nav {
-    background: #444;
-}
-
-/* Button Dark Mode */
-.dark-mode button {
-    background: #ffcc00;
-    color: #222;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
