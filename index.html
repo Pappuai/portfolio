@@ -3,223 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio of pappai</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>Hello, 👋🏻 Purnendu here ! </h1>
-        <p>
-            <button class="webd_button">
-                Web Developer
-            </button>
-            
-            <button class="des_button">
-                Designer
-            </button>
-            
-            <button class="pro_button">
-                Programmer
-            </button> 
-            <button class="coming_soon">
-                COMING SOON
-            </button>
-            
-        </p>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <hr>
+    <section id="home">
+        <h2>Home</h2>
+        <p>&quotI’m so happy to welcome you to my home! This space is filled with love and good vibes, and I want you to feel as comfortable as possible. Sit back, relax, and enjoy—your happiness means the world to me.&quot</p>
+    </section>
 
-    <section>
+    <section id="about">
         <h2>About Me</h2>
-        <p>Currently I am persuing my college degree in B.A. I am also learning web development in my leisure.</p>
+        <p>Hi, I’m [Purnendu]. I'm student and currently I am persuing my college degree.</p>
     </section>
 
-    <hr>
-
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Project 1:</strong> A personal blog website.</li>
-            <li><strong>Project 2:</strong> A weather forecasting app.</li>
-            <li><strong>Project 3:</strong> A task management system.</li>
-        </ul>
-    </section>
-
-    <hr>
-
-    <section>
+    <section id="contact">
         <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>GitHub: github.com/yourusername</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        <p>Click the button below to say hi!</p>
+        <button onclick="sayHello()">Greet Me</button>
     </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-<style>
-    
-    .webd_button{
-       background-color: #0096ff;
-       color: #ffffff;
-       border: none;
-       height: 36px;
-       width: 140px;
-       border-radius: 18px;
-       cursor: pointer;
-       font-weight: bold;
-       font-size: 15px;
-       margin-left: 3px;
-       transition: box-shadow 0.15s;
-        }
-    .webd_button:hover{
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15) ;
-    }
-    .webd_button:active{
-        opacity: 0.5;
-    }
-    
-    
-    
-    .des_button{
-       background-color: #0096ff;
-       color: #ffffff;
-       border: none;
-       height: 36px;
-       width: 90px;
-       border-radius: 18px;
-       cursor: pointer;
-       font-weight: bold;
-       font-size: 15px;
-       margin-left: 3px;
-       transition: box-shadow 0.15s;
-        }
-    .des_button:hover{
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15) ;
-    }
-    .des_button:active{
-        opacity: 0.5;
-    }
-    
-    .pro_button{
-       background-color: #ff0000;
-       color: #ffffff;
-       border: none;
-       height: 36px;
-       width: 120px;
-       border-radius: 18px;
-       cursor: pointer;
-       font-weight: bold;
-       font-size: 15px;
-       margin-left: 3px;
-       transition: box-shadow 0.15s ,transform 0.15S;
-       box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.5) ;
-        }
-    .pro_button:hover{
-        background-color: rgba(255, 0, 0, 0.7);
-    }
-    .pro_button:active{
-        transform: translate(5px, 5px);
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5) ;
-    }
-
-    .coming_soon{
-        padding: 0.6em 2em;
-        border: none;
-        outline: none;
-        color: rgb(255, 255, 255);
-        background: #111;
-        cursor: pointer;
-        position: relative;
-        z-index: 0;
-        border-radius: 10px;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        margin-left: 15px;
-        font-size: 15px;
-    }
-
-    .coming_soon:before{
-        content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-@keyframes glowing-button-85 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-
-    }
-
-    .coming_soon:after{
-        z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-    }
-
-
-    
-        h1 {
-            font-family: monospace;
-            background-color: aqua;
-            font-size: 60px;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 2px solid black; /* Cursor effect */
-            width: 0;
-            animation: typing 4s steps(40, end) forwards, blink 0.75s infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 25ch; } /* Adjust this based on text length */
-        }
-
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
-    
-    
-</style>
-
-
-
-
