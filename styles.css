@@ -1,0 +1,114 @@
+body {
+    font-family: Jost, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+p{
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.Name{
+    font-family: "Damion", serif;
+    font-weight: 100;
+    font-size: 26px;
+    font-style: normal;
+}
+button, img, a {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Or margin-right on the first button */
+}
+.button-container a {
+    text-decoration: none;
+}
+
+.greet-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.greet-button:hover {
+    background-color: #555;
+}
+
+/* Unified button style for all skill buttons */
+.html, .css, .js, .c {
+  height: 40px;
+  width: 42px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  display: flex; /* Add this */
+  align-items: center; /* Center logos */
+  justify-content: center;
+}
+
+/* Unique Monkeytype Button */
+.monkeytype {
+  height: 40px;
+  width: 56px;  /* Keep wider size */
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex; /* Add this */
+  align-items: center; /* Center logo vertically */
+  justify-content: center; /* Center logo horizontally */
+}
+
+/* Consistent hover/active states */
+.monkeytype:hover, .html:hover, .css:hover, .js:hover, .c:hover {
+  background-color: #ddd;
+}
+
+.monkeytype:active, .html:active, .css:active, .js:active, .c:active {
+  background-color: #555;
+}
+
