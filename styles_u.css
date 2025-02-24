@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Jost, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -38,6 +38,11 @@ section {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.Name{
+    font-family: "Damion", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 button, img, a {
     outline: none;
     -webkit-tap-highlight-color: transparent;
@@ -65,75 +70,39 @@ button, img, a {
     background-color: #555;
 }
 
-.monkeytype {
-  align-items: center;
-  justify-content: centre;
+/* Unified button style for all skill buttons */
+.html, .css, .js, .c {
   height: 40px;
-  width: 56px;  
-  background-position: center;
+  width: 42px;
   border: 2px solid black;
   border-radius: 10px;
-  cursor: pointer;
   background-color: transparent;
-  padding: 0px;
+  cursor: pointer;
   transition: background-color 0.15s;
+  display: flex; /* Add this */
+  align-items: center; /* Center logos */
+  justify-content: center;
 }
-.monkeytype:active{
-    background-color: rgb(85, 85, 85);
+
+/* Unique Monkeytype Button */
+.monkeytype {
+  height: 40px;
+  width: 56px;  /* Keep wider size */
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex; /* Add this */
+  align-items: center; /* Center logo vertically */
+  justify-content: center; /* Center logo horizontally */
 }
-.html{
-    height: 40px;
-    width: 42px;  
-    background-position: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 0px;
-    transition: background-color 0.15s;
+
+/* Consistent hover/active states */
+.monkeytype:hover, .html:hover, .css:hover, .js:hover, .c:hover {
+  background-color: #ddd;
 }
-.html:active{
-    background-color: rgb(85, 85, 85);
+
+.monkeytype:active, .html:active, .css:active, .js:active, .c:active {
+  background-color: #555;
 }
-.css{
-    height: 40px;
-    width: 42px;  
-    background-position: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 0px;
-    transition: background-color 0.15s;
-}
-.css:active{
-    background-color: rgb(85, 85, 85);
-}
-.js{
-    height: 40px;
-    width: 42px;  
-    background-position: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 0px;
-    transition: background-color 0.15s;
-}
-.js:active{
-    background-color: rgb(85, 85, 85);
-}
-.c{
-    height: 40px;
-    width: 42px;  
-    background-position: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 0px;
-    transition: background-color 0.15s;
-}
-.c:active{
-    background-color: rgb(85, 85, 85);
-}
+
